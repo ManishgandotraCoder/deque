@@ -1,5 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 import axios from "axios";
+const apiKey = "";
 const processBooksData = (books: any[]) => {
   // Extract authors and publication dates
   const authors: Record<string, number> = {};
@@ -43,7 +44,7 @@ export class BookController {
     const p = req.query || 0;
 
     const query = p || "search"; // Default query
-    const googleBooksAPI = `https://www.googleapis.com/books/v1/volumes?key=AIzaSyDybgGurZlTyjB8fvszhsu4A-A8yWSFWoo&maxResults=${maxResults}&startIndex=${startIndex}&q=${query}`;
+    const googleBooksAPI = `https://www.googleapis.com/books/v1/volumes?key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}&q=${query}`;
 
     const startTime = Date.now(); // Track server start time
 
