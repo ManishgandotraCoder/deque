@@ -1,7 +1,7 @@
 # how to Run project
 
 For Front end
-cd frontend
+cd ui
 npm install
 npm start
 
@@ -97,6 +97,6 @@ This project is a full-stack application built with React and Node.js that allow
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd react-node-google-books
+git clone https://github.com/ManishgandotraCoder/deque.git
+cd deque
 ```
