@@ -44,7 +44,7 @@ export class BookController {
     const p = req.query || 0;
 
     const query = p || "search"; // Default query
-    const googleBooksAPI = `https://www.googleapis.com/books/v1/volumes?key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}&q=${query}`;
+    const googleBooksAPI = `https://www.googleapis.com/books/v1/volumes?key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}&q=${query.p}`;
 
     const startTime = Date.now(); // Track server start time
 
